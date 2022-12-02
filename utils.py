@@ -8,3 +8,6 @@ class Input:
 
     def paragraphs(self, type=str):
         return [list(map(type, group.split("\n"))) for group in self.raw.split("\n\n")]
+
+    def words(self, type=str):
+        return [list(map(type, line.split())) for line in self.lines()]
